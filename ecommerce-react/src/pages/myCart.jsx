@@ -1,9 +1,12 @@
 import logo from '../assets/logo.png';
 import '../styles/myCart.css'
+import { useNavigate } from 'react-router-dom'
 
 
 
-function myCart(){
+function MyCart(){
+
+   const navigate = useNavigate();
 
     return(
         <div>
@@ -17,8 +20,10 @@ function myCart(){
                    <p> Qty </p>
                    <p> Price </p>
              </div>
+             <hr style = {{ border : 'none', borderTop : '3px solid black', width : "80%"}}/>
              <div className = "buttons">
-                   <button>
+               <hr style = {{ border : 'none', borderTop : '3px solid black', }}/>
+                   <button onClick={ () => navigate("/shoppingDetails")} >
                       Continue Shopping
                    </button>
                    <button>
@@ -31,4 +36,4 @@ function myCart(){
 
 
 
-export default myCart;
+export default MyCart;

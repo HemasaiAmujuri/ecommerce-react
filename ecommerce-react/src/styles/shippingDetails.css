@@ -1,0 +1,54 @@
+img {
+    margin-right: 80%;
+}
+
+
+.basicInfo {
+    display : flex;
+    flex-direction: column;
+    margin-bottom:20px;
+}
+
+
+input {
+    width :70%;
+    height: 30px;
+}
+
+textarea {
+    width :70%;
+}
+
+
+.body {
+    display : flex;
+     justify-content: space-between;
+     /* background-color: blueviolet; */
+}
+
+.left {
+    margin-top : 50px;
+    margin-left: 400px;
+}
+
+.right {
+    margin-top : 50px;
+    margin-right: 400px;
+
+}
+
+
+.productInfo{
+    height : 150px;
+    width : 300px;
+    border:3px solid black;
+}
+
+button {
+    margin-top : 30px;
+    background-color: orange;
+    padding : 5px;
+    width: 300px;
+    height : 30px;
+    border-radius: 5px;
+}

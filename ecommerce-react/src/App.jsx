@@ -1,12 +1,16 @@
 import Mycart from '../src/pages/myCart'
+import ShippinDetails from '../src/pages/shippingDetails'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 
 function App(){
   return(
-    <div>
-     
-     <Mycart />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Mycart />} />
+        <Route path='/shoppingDetails' element={<ShippinDetails />} />
+      </Routes>
+    </Router>
   )
 }
 
