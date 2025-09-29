@@ -1,10 +1,14 @@
-function Test(){
+import Mycart from '../src/pages/myCart'
+
+
+function App(){
   return(
     <div>
-      <p> Hello World</p>
+     
+     <Mycart />
     </div>
   )
 }
 
 
-export default Test
+export default App;
