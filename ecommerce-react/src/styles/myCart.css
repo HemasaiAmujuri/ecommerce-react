@@ -29,3 +29,57 @@ button {
 }
 
 
+.products-list {
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    width : 60%;
+}
+
+ 
+.products-container {
+    margin-left: 180px;
+}
+
+
+.quantity {
+    height : 30px;
+    width:30px;
+    background-color: lightgray;
+    margin-top: 0px;
+}
+
+.quantity-value {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height : 25px;
+    width:25px;
+    border: 2px solid black;
+}
+
+
+.product-count {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80px;
+    height : 30px;
+    margin-top: 0px;;
+}
+
+
+
+.product-info {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: blue; */
+    margin-bottom: 10px;
+    width:30px;
+}
+
+
+
+

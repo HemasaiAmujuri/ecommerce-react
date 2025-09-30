@@ -9,6 +9,7 @@ function App(){
       <Routes>
         <Route path="/" element={<Mycart />} />
         <Route path='/shoppingDetails' element={<ShippinDetails />} />
+        <Route path='/cart' element={<Mycart />} />
       </Routes>
     </Router>
   )

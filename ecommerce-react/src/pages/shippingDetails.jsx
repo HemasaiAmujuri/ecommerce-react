@@ -1,5 +1,6 @@
 import logo from "../assets/logo.png";
 import "../styles/shippingDetails.css";
+import { Link } from 'react-router-dom';
 
 function shippingDetails() {
   return (
@@ -10,7 +11,7 @@ function shippingDetails() {
           style={{ height: "100px", width: "100px", marginLeft: "20px" }}
         />
         <p> Home </p>
-        <p> Cart </p>
+        <p> <Link to = "/cart" style={{ textDecoration : "none"}}> Cart </Link></p>
       </div>
       <hr
         style={{ border: "none", borderTop: "3px solid black", width: "100%" }}
