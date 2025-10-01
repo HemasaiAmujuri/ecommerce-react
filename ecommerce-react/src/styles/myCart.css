@@ -1,3 +1,10 @@
+body {
+    margin:0px;
+    padding:0px;
+}
+
+
+
 .top {
     display : flex;
     justify-content: space-between;
@@ -10,8 +17,25 @@
     display : flex;
     justify-content: space-between;
     align-items: center;
-    width : 50%;
-    margin-left:20%;
+    width : 65%;
+    margin-left:25%;
+}
+
+
+.sticky-postion { 
+        position: sticky;
+        top:0px;
+        z-index: 10;
+        background-color:orange;
+}
+
+
+.heading-qty {
+    margin-left: 150px;
+}
+
+.heading-price {
+    margin-right:40px;
 }
 
 
@@ -33,12 +57,13 @@ button {
     display : flex;
     align-items: center;
     justify-content: space-between;
-    width : 60%;
+    width : 85%;
+    margin-bottom: 20px;;
 }
 
  
 .products-container {
-    margin-left: 180px;
+    margin-left: 100px;
 }
 
 
@@ -70,16 +95,38 @@ button {
 }
 
 
-
 .product-info {
     display : flex;
-    align-items: center;
     justify-content: center;
-    /* background-color: blue; */
-    margin-bottom: 10px;
-    width:30px;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap:50px;
+    width:400px;
+    padding-left:10px;
 }
 
 
+.product-image{
+    object-fit: cover;
+}
+
+
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.total {
+    display: flex;
+  justify-content: flex-end;
+  margin-right: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
 
 

@@ -7,6 +7,9 @@ import axios from "axios";
 function MyCart() {
   const [products, setProducts] = useState([]);
   const [quantities, setQuantities] = useState({});
+  const [total, setTotal] = useState(0);
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +21,22 @@ function MyCart() {
       }
     };
     fetchData();
+
   }, []);
+
+useEffect(() => {
+  const totalPrice = () => {
+    return products.reduce((total, product) => {
+      const quantity = quantities[product.id] || 1;
+      return total + product.price * quantity;
+    }, 0);
+  };
+
+  setTotal(totalPrice());
+}, [products, quantities]);
+
+
+   
 
   const handleIncrement = (productId) => {
     setQuantities((prev) => ({
@@ -38,6 +56,7 @@ function MyCart() {
 
   return (
     <div>
+      <div className="sticky-postion">
       <div className="top">
         <img
           src={logo}
@@ -48,13 +67,14 @@ function MyCart() {
       <hr style={{ border: "none", borderTop: "3px solid black" }} />
       <div className="products">
         <p> Products </p>
-        <p> Qty </p>
-        <p> Price </p>
+        <p className="heading-qty"> Qty </p>
+        <p className="heading-price" > Price </p>
       </div>
       <hr
-        style={{ border: "none", borderTop: "3px solid black", width: "80%" }}
+        style={{ border: "none", borderTop: "3px solid black", width: "95%" }}
       />
-      <div className="products-container">
+      </div>
+        <div className="products-container">
         <div className="products-container">
           {products.map((product) => {
             const quantity = quantities[product.id] || 1;
@@ -62,33 +82,43 @@ function MyCart() {
             return (
               <div key={product.id} className="products-list">
                 <div className="product-info">
-                  <img
-                    src={product.image}
-                    alt="product image"
-                    height="100px"
-                    width="100px"
-                  />
+                  <div className="product-image">
+                    <img
+                      src={product.image}
+                      alt="product image"
+                      height="150px"
+                      width="150px"
+                    />
+                  </div>
                   <p className="title">{product.title}</p>
                 </div>
                 <div className="product-count">
                   <button
                     className="quantity"
                     onClick={() => handleDecrement(product.id)}
-                  >-
+                  >
+                    -
                   </button>
                   <div className="quantity-value"> {quantity} </div>
                   <button
                     className="quantity"
                     onClick={() => handleIncrement(product.id)}
-                  >+
+                  >
+                    +
                   </button>
                 </div>
-                <p>{Math.round(product.price * quantity)}</p>
+                <p>&#8377;{Math.round(product.price * quantity)}</p>
               </div>
             );
           })}
         </div>
       </div>
+        <div>
+          <hr
+        style={{ border: "none", borderTop: "3px solid black", width: "95%" }}
+      />
+        <p className="total">Total: &#8377;{Math.round(total)}</p>
+        </div>
       <div className="buttons">
         <hr style={{ border: "none", borderTop: "3px solid black" }} />
         <button>Continue Shopping</button>
