@@ -20,7 +20,7 @@ function ProductLists() {
       });
   });
   return (
-    <div>
+    <div className="screen">
       <div className="top">
         <img
           src={logo}

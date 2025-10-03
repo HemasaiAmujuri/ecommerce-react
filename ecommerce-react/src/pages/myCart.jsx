@@ -66,7 +66,7 @@ useEffect(() => {
         <p> <Link to="/home" style={{ textDecoration : "none"}}>Home </Link></p>
       </div>
       <hr style={{ border: "none", borderTop: "3px solid black" }} />
-      <div className="products">
+      <div className="cart">
         <p> Products </p>
         <p className="heading-qty"> Qty </p>
         <p className="heading-price" > Price </p>
@@ -75,14 +75,14 @@ useEffect(() => {
         style={{ border: "none", borderTop: "3px solid black", width: "95%" }}
       />
       </div>
-        <div className="products-container">
-        <div className="products-container">
+        <div className="carts-container">
+        <div className="-container">
           {products.map((product) => {
             const quantity = quantities[product.id] || 1;
 
             return (
-              <div key={product.id} className="products-list">
-                <div className="product-info">
+              <div key={product.id} className="carts-list">
+                <div className="cart-info">
                   <div className="product-image">
                     <img
                       src={product.image}
@@ -93,7 +93,7 @@ useEffect(() => {
                   </div>
                   <p className="title">{product.title}</p>
                 </div>
-                <div className="product-count">
+                <div className="cart-count">
                   <button
                     className="quantity"
                     onClick={() => handleDecrement(product.id)}
