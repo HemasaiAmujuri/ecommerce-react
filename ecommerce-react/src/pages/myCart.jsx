@@ -3,6 +3,7 @@ import "../styles/myCart.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 function MyCart() {
   const [products, setProducts] = useState([]);
@@ -62,7 +63,7 @@ useEffect(() => {
           src={logo}
           style={{ height: "100px", width: "100px", marginLeft: "20px" }}
         />
-        <p> Home </p>
+        <p> <Link to="/home" style={{ textDecoration : "none"}}>Home </Link></p>
       </div>
       <hr style={{ border: "none", borderTop: "3px solid black" }} />
       <div className="products">
